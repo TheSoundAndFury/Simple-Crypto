@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Bare - Start Bootstrap Template</title>
+    <title>Simple-Crypto</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/css/bootstrap.min.css" rel="stylesheet">
@@ -18,7 +18,7 @@
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
     <div class="container">
-        <a class="navbar-brand" href="#">Start Bootstrap</a>
+        <a class="navbar-brand" href="#">Simple Crypto</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -47,11 +47,34 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-12 text-center">
-            <h1 class="mt-5">A Bootstrap 4 Starter Template</h1>
-            <p class="lead">Complete with pre-defined file paths and responsive navigation!</p>
+            <h1 class="mt-5">Simple Crypto</h1>
+            <p class="lead">Curent Top 10 Cryto-Currency Listings.</p>
             <ul class="list-unstyled">
-                <li>Bootstrap 4.1.3</li>
-                <li>jQuery 3.3.1</li>
+
+                <table class="table table-hover table-bordered">
+                    <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Name</th>
+                        <th>Symbol</th>
+                        <th>Price</th>
+                    </tr>
+                    </thead>
+
+                <?php
+               // echo "<pre>";
+               //print_r($data);
+                $iZero = array_values($data);
+                for($i = 0; $i < 10; $i++){
+                    echo "<tr><td>". $iZero[$i]['rank']."</td>";
+                    echo "<td>".  $iZero[$i]['name']."</td>";
+                    echo "<td>".  $iZero[$i]['symbol']."</td>";
+                    echo "<td>". "$" . number_format($iZero[$i]['quotes']['USD']['price'],2)."</td></tr>";
+                }
+
+                ?>
+                </table>
+
             </ul>
         </div>
     </div>
