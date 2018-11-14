@@ -10,6 +10,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/css/customStyle.css" rel="stylesheet">
 
 </head>
 
@@ -51,7 +52,7 @@
             <p class="lead">Curent Top 10 Cryto-Currency Listings.</p>
             <ul class="list-unstyled">
 
-                <table class="table table-hover table-bordered">
+                <table class="table table-hover table-bordered maintable">
                     <thead>
                     <tr>
                         <th>Rank</th>
@@ -61,18 +62,16 @@
                     </tr>
                     </thead>
 
-                <?php
-               // echo "<pre>";
-               //print_r($data);
-                $iZero = array_values($data);
-                for($i = 0; $i < 10; $i++){
-                    echo "<tr><td>". $iZero[$i]['rank']."</td>";
-                    echo "<td>".  $iZero[$i]['name']."</td>";
-                    echo "<td>".  $iZero[$i]['symbol']."</td>";
-                    echo "<td>". "$" . number_format($iZero[$i]['quotes']['USD']['price'],2)."</td></tr>";
-                }
+                    <?php
+                    $iZero = array_values($data); //The index for the data comes in out of order, so we're making our own.
+                    for($i = 0; $i < 10; $i++){
+                        echo "<tr><td>". $iZero[$i]['rank']."</td>";
+                        echo "<td>".  $iZero[$i]['name']."</td>";
+                        echo "<td>".  $iZero[$i]['symbol']."</td>";
+                        echo "<td>". "$" . number_format($iZero[$i]['quotes']['USD']['price'],2)."</td></tr>";
+                    }
 
-                ?>
+                    ?>
                 </table>
 
             </ul>
