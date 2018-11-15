@@ -15,7 +15,7 @@ class APICall extends CI_Model
 	 */
 	function Topten()
 	{
-		$url = 'https://api.coinmarketcap.com/v2/ticker/?limit=10&sort=rank';
+		$url = 'https://api.coinmarketcap.com/v2/ticker/?limit=100&sort=rank';
 
 		$contents = file_get_contents($url);
 		$results = json_decode($contents, true);

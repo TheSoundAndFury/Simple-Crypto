@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class SimpleCrypto extends CI_Controller {
+class simpleCrypto extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -20,10 +20,15 @@ class SimpleCrypto extends CI_Controller {
 	 */
 	public function index()
 	{
-
+		$this->load->helper('url');
 		$this->load->model('APICall');
 		$data = $this->APICall->TopTen();
 
 		$this->load->view('mainView', $data);
+	}
+
+	public function about(){
+
+		$this->load->view('about');
 	}
 }
