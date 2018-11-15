@@ -1,0 +1,15 @@
+
+
+.maintable{
+	background-color: #CDE7F0;
+	font-weight: 600;
+}
+.datatables_wrapper{
+	height:100%;
+	width:100%;
+	display: block;
+	padding:20px;
+}
+.form-control{
+	margin: 0px 10px 0px 10px;
+}
