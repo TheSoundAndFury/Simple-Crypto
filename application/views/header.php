@@ -10,20 +10,12 @@
 	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css"/>
 	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.13/datatables.min.css"/>
 
-	<script src="vendor/js/jquery-3.3.1.js"></script>
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/vendor/css/bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/vendor/css/customStyle.css"/>
 
-	<script src="vendor/js/dataTables.js"></script>
-
-
-
-	<!-- Bootstrap core CSS -->
-	<link href="vendor/css/bootstrap.min.css" rel="stylesheet">
-	<link href="vendor/css/customStyle.css" rel="stylesheet">
-
-
+	<script type="text/javascript" src="<?php echo base_url(); ?>vendor/js/jquery-3.3.1.js"></script>
+	<script type="text/javascript" src="<?php echo base_url(); ?>vendor/js/datatables.js"></script>
 	<!-- Add datatables library loading -->
-
-
 
 
 </head>
@@ -33,25 +25,19 @@
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
 	<div class="container">
-		<a class="navbar-brand" href="#">Simple Crypto</a>
+		<a class="navbar-brand" href="<?php echo base_url("index.php/simpleCrypto/index") ?>">Simple Crypto</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
 		<div class="collapse navbar-collapse" id="navbarResponsive">
 			<ul class="navbar-nav ml-auto">
-				<li class="nav-item active">
-					<a class="nav-link" href="#">Home
+				<li class="nav-item ">
+					<a class="nav-link" href="<?php echo base_url("index.php/simpleCrypto/index") ?>">Home
 						<span class="sr-only">(current)</span>
 					</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="<?php echo base_url('simpleCrypto/about') ?>">About</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Services</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Contact</a>
+					<a class="nav-link" href="<?php echo base_url("index.php/simpleCrypto/about") ?>">About</a>
 				</li>
 			</ul>
 		</div>
